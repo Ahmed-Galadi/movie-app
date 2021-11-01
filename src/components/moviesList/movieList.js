@@ -1,6 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { getAllMovies } from '../../features/movies/movieSlice';
 
-function movieList() {
+function MovieList() {
+
+    const movies = useSelector(getAllMovies);
+    console.log(movies);
+
     return (
         <div>
             Movie List
@@ -8,4 +14,4 @@ function movieList() {
     )
 }
 
-export default movieList
+export default MovieList
